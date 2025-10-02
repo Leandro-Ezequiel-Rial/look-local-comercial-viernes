@@ -1,0 +1,76 @@
+.sobre-nosotros-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-cuadrado {
+    width: 70%;
+    height: 70%;
+}
+
+.textos-contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo-texto {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subtitulo-texto {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.textos-contenedor-filosofia {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subtitulo-pequeno {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.texto {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+    .sobre-nosotros-contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .logo-cuadrado {
+        width: 100%;
+        height: 100%;
+    }
+
+    .textos-contenedor {
+        margin-top: 0;
+    }
+}
