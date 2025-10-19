@@ -140,13 +140,16 @@ export function renderCarrito() {
         contenedorProductosCarrito.innerHTML = `<p class="carrito-vacio">Tu carrito está vacío.</p>`;
     }
 
+    const div = document.createElement('div');
+    div.className = 'productos-carrito';
+
     productosSeleccionados.forEach(producto => {
-        const div = document.createElement('div');
-        div.className = 'producto-carrito';
+        const div2 = document.createElement('div');
+        div2.className = 'producto-carrito';
         const precioUnitario = producto.precio_promocion !== null ? producto.precio_promocion : producto.precio_original;
         const subtotal = precioUnitario * producto.cantidad;
 
-        div.innerHTML = `
+        div2.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.titulo}" class="producto-imagen-carrito">
             <div class="producto-info">
                 <h3 class="producto-titulo-carrito">${producto.titulo}</h3>
@@ -159,6 +162,7 @@ export function renderCarrito() {
                 <span class="producto-subtotal">Subtotal: US$ ${subtotal.toFixed(2)}</span>
             </div>
         `;
+        div.appendChild(div2);
         contenedorProductosCarrito.appendChild(div);
     });
 
