@@ -67,8 +67,16 @@ p, a, span {
     }
 }
 
-.nav-link-footer {
+.nav-link-active {
     font-weight: 600;
+}
+
+.nav-link-footer {
+    font-weight: 500;
+}
+
+.nav-link-footer-active {
+    font-weight: bolder;
 }
 
 .contenedor-principal {
@@ -108,6 +116,22 @@ p, a, span {
     width: 100%;
 }
 
+.contenedor-producto-imagen {
+    position: relative;
+}
+
+.promocion-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f5453c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
 .producto-imagen {
     width: 300px;
     object-fit: cover;
@@ -117,7 +141,9 @@ p, a, span {
     display: flex;
     flex-direction: column;
     width: 300px;
+    height: 100%;
     padding: 20px 10px 40px 10px;
+    flex-grow: 1;
 }
 
 .producto-titulo {
@@ -128,6 +154,48 @@ p, a, span {
 .producto-texto {
     font-size: 0.9rem;
     font-weight: 400;
+}
+
+.producto-precio {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.producto-precio-viejo {
+    text-decoration: line-through;
+}
+
+.producto-precio-promocion {
+    color: #f5453c;
+}
+
+.boton-agregar-carrito {
+    background-color: #FE9F9A;
+    width: 100%;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #5E3F43;
+    }
+}
+
+.boton-mas,
+.boton-menos {
+    border: none;
+    background-color: #222;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 @media screen and (min-width: 650px) {
@@ -162,7 +230,6 @@ p, a, span {
     font-weight: 400;
     margin-top: 20px;
 }
-
 
 @media screen and (min-width: 768px) {
     .contenedor-productos-grid {

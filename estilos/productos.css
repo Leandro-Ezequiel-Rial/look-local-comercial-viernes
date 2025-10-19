@@ -25,6 +25,11 @@
     }
 }
 
+.categoria-texto-active {
+    background-color: #5E3F43;
+    color: #fff;
+}
+
 .textos-contenedor {
     padding: 20px;
 }
@@ -51,5 +56,9 @@
         &:hover {
             border-radius: 10px;
         }
+    }
+
+    .categoria-texto-active {
+        border-radius: 10px;
     }
 }
